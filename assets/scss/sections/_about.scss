@@ -1,0 +1,160 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about {
+  padding-top: 60px;
+  background-color: var(--background-color);
+  padding-bottom: 20px;
+
+  .content {
+    h2 {
+      font-family: var(--heading-font);
+      font-size: 2.5rem;
+      font-weight: 300;
+      line-height: 1.3;
+      color: var(--heading-color);
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      color: var(--default-color);
+      margin-bottom: 2rem;
+
+      &.lead {
+        font-size: 1.25rem;
+        font-weight: 300;
+        color: color-mix(in srgb, var(--default-color), transparent 10%);
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+
+  .stats-wrapper {
+    display: flex;
+    gap: 3rem;
+    margin: 3rem 0;
+    padding: 2.5rem 0;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+
+      .number {
+        font-size: 3rem;
+        font-weight: 200;
+        color: var(--accent-color);
+        line-height: 1;
+        margin-bottom: 0.5rem;
+      }
+
+      .label {
+        font-size: 0.875rem;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .cta-wrapper {
+    margin-top: 2.5rem;
+
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.125rem;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 400;
+      transition: all 0.3s ease;
+
+      i {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        color: color-mix(in srgb, var(--accent-color), transparent 20%);
+
+        i {
+          transform: translateX(4px);
+        }
+      }
+    }
+  }
+
+  .image-wrapper {
+    position: relative;
+    padding-left: 2rem;
+
+    @media (max-width: 992px) {
+      padding-left: 0;
+      margin-top: 3rem;
+    }
+
+    img {
+      border-radius: 8px;
+      box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 85%);
+    }
+
+    .floating-element {
+      position: absolute;
+      bottom: -2rem;
+      left: -2rem;
+      background-color: var(--surface-color);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 320px;
+      box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 80%);
+
+      @media (max-width: 992px) {
+        position: static;
+        margin-top: 2rem;
+        max-width: none;
+      }
+
+      .quote-content {
+        blockquote {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: var(--default-color);
+          margin-bottom: 1rem;
+          font-style: italic;
+          font-weight: 300;
+        }
+
+        cite {
+          font-size: 0.875rem;
+          color: color-mix(in srgb, var(--default-color), transparent 40%);
+          font-style: normal;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 80px 0;
+  }
+
+  @media (max-width: 576px) {
+    padding: 60px 0;
+  }
+}
